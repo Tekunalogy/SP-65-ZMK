@@ -1,0 +1,9 @@
+file_format: "1"
+id: sp65
+name: SP65
+type: shield
+url: https://github.com/Tekunalogy/zmk-config
+requires: [pro_micro]
+exposes: []
+features:
+  - keys
