@@ -1,6 +1,12 @@
 if SHIELD_SP65
 
 config ZMK_KEYBOARD_NAME
-    default "SP65"
+    default "SP-65-JM"
+
+config BT_DEVICE_NAME
+	default ZMK_KEYBOARD_NAME
+
+config USB_DEVICE_PRODUCT
+	default ZMK_KEYBOARD_NAME
 
 endif
