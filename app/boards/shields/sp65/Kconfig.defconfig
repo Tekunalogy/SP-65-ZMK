@@ -1,7 +1,7 @@
 if SHIELD_SP65
 
 config ZMK_KEYBOARD_NAME
-    default "SP-65-CZ"
+    default "SP-65"
 
 config BT_DEVICE_NAME
 	default ZMK_KEYBOARD_NAME
