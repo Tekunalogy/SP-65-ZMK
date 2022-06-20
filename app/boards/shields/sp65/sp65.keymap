@@ -4,8 +4,8 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
-#define FN    2
-#define DISABLE    1
+#define FN      2
+#define DISABLE 1
 
 / {
     keymap {
