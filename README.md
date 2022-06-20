@@ -1,13 +1,34 @@
-# Zephyr™ Mechanical Keyboard (ZMK) Firmware
+# "Southpaw-65" Nice!Nano Firmware
+These are the steps to build the firmware for yourself, if you want to make changes.
 
-[![Discord](https://img.shields.io/discord/719497620560543766)](https://zmk.dev/community/discord/invite)
-[![Build](https://github.com/zmkfirmware/zmk/workflows/Build/badge.svg)](https://github.com/zmkfirmware/zmk/actions)
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](CODE_OF_CONDUCT.md)
+First you need to complete the setup mentioned [here](https://zmk.dev/docs/development/setup).
 
-[ZMK Firmware](https://zmk.dev/) is an open source (MIT) keyboard firmware built on the [Zephyr™ Project](https://www.zephyrproject.org/) Real Time Operating System (RTOS). ZMK's goal is to provide a modern, wireless, and powerful firmware free of licensing issues.
+Anytime you want to build the software from a new terminal instance, `cd` into the main `zmk/` directory and run the following:
+```bash
+source zephyr/zephyr-env.sh
+```
 
-Check out the website to learn more: https://zmk.dev/
+Next, the command to build the firmware is:
+```bash
+west build -p -b nice_nano -- -DSHIELD=sp6
+```
 
-You can also come join our [ZMK Discord Server](https://zmk.dev/community/discord/invite)
+After that, the `zmk.uf2` file will be available at the following path:
+```
+ZMK/app/build/zephyr/zmk.uf2
+```
 
-To review features, check out the [feature overview](https://zmk.dev/docs/). ZMK is under active development, and new features are listed with the [enhancement label](https://github.com/zmkfirmware/zmk/issues?q=is%3Aissue+is%3Aopen+label%3Aenhancement) in GitHub. Please feel free to add 👍 to the issue description of any requests to upvote the feature.
+# Troubleshooting
+## Why isn't the name of the device changing when I build the firmware?
+To fix this, you can first try checking the following file:
+```
+ZMK/app/build/zephyr/.config
+```
+
+If the file is showing the incorrect device name, try deleting the file and rebuilding.
+
+If the file is showing the correct device name, then try deleting the following folder, and rebuilding:
+```
+ZMK/app/build/
+```
+If that doesn't work, you may need to contact [ZMK](https://zmk.dev) for support or ask the community discord.
