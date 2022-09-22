@@ -22,7 +22,7 @@ source zephyr/zephyr-env.sh
 
 Next, the command to build the firmware is:
 ```bash
-west build -p -b nice_nano -- -DSHIELD=sp6
+west build -p -b nice_nano -- -DSHIELD=sp65
 ```
 
 After that, the `zmk.uf2` file will be available at the following path:
