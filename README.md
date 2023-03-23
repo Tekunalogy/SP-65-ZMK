@@ -20,7 +20,7 @@ Anytime you want to build the software from a new terminal instance, `cd` into t
 source zephyr/zephyr-env.sh
 ```
 
-Next, the command to build the firmware is:
+Next, cd into the `zmk/app/` directory, and run the following command to build the firmware:
 ```bash
 west build -p -b nice_nano -- -DSHIELD=sp65
 ```
